@@ -12,6 +12,9 @@ return {
       },
       formatters_by_ft = {
         nix = { "nixfmt" },
+        json = { "biome" },
+        jsonc = { "biome" },
+        rs = { "rustfmt" },
       },
       -- The options you set here will be merged with the builtin formatters.
       -- You can also define any custom formatters here.
