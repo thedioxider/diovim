@@ -14,7 +14,10 @@ return {
         nix = { "nixfmt" },
         json = { "biome" },
         jsonc = { "biome" },
+        javascript = { "biome" },
+        typescript = { "biome" },
         rs = { "rustfmt" },
+        xml = { "xmlformat" },
       },
       -- The options you set here will be merged with the builtin formatters.
       -- You can also define any custom formatters here.
@@ -32,6 +35,9 @@ return {
         -- shfmt = {
         --   prepend_args = { "-i", "2", "-ci" },
         -- },
+        xmlformat = {
+          prepend_args = { "--blanks" },
+        },
       },
     }
     return opts
