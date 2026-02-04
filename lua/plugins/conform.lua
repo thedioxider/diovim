@@ -18,6 +18,7 @@ return {
         typescript = { "biome" },
         rs = { "rustfmt" },
         xml = { "xmlformat" },
+        python = { "black" },
       },
       -- The options you set here will be merged with the builtin formatters.
       -- You can also define any custom formatters here.
