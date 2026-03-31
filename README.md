@@ -38,3 +38,21 @@ Previously LazyVim. Previously Helix. The cycle continues.
 | `Left` / `Right` | Switch main cursor (multicursor only) |
 | `\x` | Delete main cursor (multicursor only) |
 | `Esc` | Clear all cursors |
+
+### Search & Replace
+| Key | Action |
+|-----|--------|
+| `<Leader>ss` | Search/replace in workspace |
+| `<Leader>se` | Search/replace in current filetype |
+| `<Leader>sf` | Search/replace in current file |
+| `<Leader>sw` | Replace word under cursor |
+| Visual `<Leader>s` | Replace selection |
+| `gS` (neo-tree/oil) | Search/replace in directory |
+
+### Formatting
+| Key | Action |
+|-----|--------|
+| `<Leader>lf` | Format current buffer |
+| `<Leader>uf` | Toggle autoformat (buffer) |
+| `<Leader>uF` | Toggle autoformat (global) |
+| `gF` (neo-tree) | Format all files in directory |
