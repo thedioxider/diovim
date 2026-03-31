@@ -7,9 +7,15 @@ return {
 			"folke/which-key.nvim",
 			opts = {
 				spec = {
-					-- Hide multicursor keys from which-key (disabled during multicursor anyway)
 					{ "<up>", hidden = true },
 					{ "<down>", hidden = true },
+					{ "<LocalLeader><up>", hidden = true },
+					{ "<LocalLeader><down>", hidden = true },
+					{ "<LocalLeader>n", hidden = true },
+					{ "<LocalLeader>s", hidden = true },
+					{ "<LocalLeader>N", hidden = true },
+					{ "<LocalLeader>S", hidden = true },
+					{ "<LocalLeader>x", hidden = true },
 				},
 			},
 		},
