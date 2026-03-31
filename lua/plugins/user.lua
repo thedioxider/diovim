@@ -69,6 +69,9 @@ return {
   -- Label-based navigation
   { import = "astrocommunity.motion.flash-nvim" },
 
+  -- Search and replace
+  { import = "astrocommunity.search.grug-far-nvim" },
+
   -- Which-key popup style
   {
     "folke/which-key.nvim",
