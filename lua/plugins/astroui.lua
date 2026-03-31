@@ -20,6 +20,8 @@ return {
         LspReferenceRead = { bg = "#363a4f" },
         LspReferenceWrite = { bg = "#363a4f" },
         FlashLabel = { fg = "#1B1E28", bg = "#5FB3A1", bold = true },
+        NeoTreeFloatBorder = { fg = "#506477", bg = "#1B1E28" },
+        NeoTreeTitleBar = { fg = "#E4F0FB", bg = "#506477", bold = true },
       },
     },
     -- Icons can be configured throughout the interface
