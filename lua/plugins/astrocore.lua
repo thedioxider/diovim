@@ -73,6 +73,10 @@ return {
     mappings = {
       -- first key is the mode
       n = {
+        -- line navigation
+        ["gh"] = { "^", desc = "Go to beginning of line" },
+        ["gl"] = { "$", desc = "Go to end of line" },
+
         -- splits (disable defaults, move to leader)
         ["\\"] = false,
         ["|"] = false,
@@ -127,6 +131,10 @@ return {
         -- ["<C-S>"] = false,
       },
       v = {
+        -- line navigation
+        ["gh"] = { "^", desc = "Go to beginning of line" },
+        ["gl"] = { "g_", desc = "Go to end of line" },
+
         -- system clipboard
         ["<A-y>"] = { '"+y', desc = "Yank to system clipboard" },
         ["<A-p>"] = { '"+p', desc = "Paste from system clipboard" },
