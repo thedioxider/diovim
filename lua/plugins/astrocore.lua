@@ -8,6 +8,10 @@ return {
 	"AstroNvim/astrocore",
 	---@type AstroCoreOpts
 	opts = {
+		-- Auto-change cwd to detected project root
+		rooter = {
+			autochdir = true,
+		},
 		-- Configure core features of AstroNvim
 		features = {
 			large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
