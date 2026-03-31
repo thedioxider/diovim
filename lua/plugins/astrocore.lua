@@ -66,6 +66,10 @@ return {
 		mappings = {
 			-- first key is the mode
 			n = {
+				-- swap ; and . (. for f/t repeat forward, ; for repeat last edit)
+				[";"] = { ".", desc = "Repeat last edit" },
+				["."] = { ";", desc = "Repeat f/t forward" },
+
 				-- system clipboard
 				["<A-y>"] = { '"+y', desc = "Yank to system clipboard" },
 				["<A-p>"] = { '"+p', desc = "Paste from system clipboard" },
