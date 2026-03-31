@@ -47,6 +47,7 @@ return {
 				spell = true, -- sets vim.opt.spell
 				signcolumn = "yes", -- sets vim.opt.signcolumn to yes
 				wrap = false, -- sets vim.opt.wrap
+				clipboard = "", -- don't auto-sync with system clipboard
 			},
 			g = { -- vim.g.<key>
 				-- configure global vim variables (vim.g)
@@ -60,7 +61,12 @@ return {
 		mappings = {
 			-- first key is the mode
 			n = {
-				-- second key is the lefthand side of the map
+				-- system clipboard
+				["<A-y>"] = { '"+y', desc = "Yank to system clipboard" },
+				["<A-p>"] = { '"+p', desc = "Paste from system clipboard" },
+
+				-- selection
+				["<A-a>"] = { "ggVG", desc = "Select all" },
 
 				-- navigate buffer tabs
 				["<A-l>"] = {
@@ -88,6 +94,11 @@ return {
 
 				-- setting a mapping to false will disable it
 				-- ["<C-S>"] = false,
+			},
+			v = {
+				-- system clipboard
+				["<A-y>"] = { '"+y', desc = "Yank to system clipboard" },
+				["<A-p>"] = { '"+p', desc = "Paste from system clipboard" },
 			},
 		},
 	},
