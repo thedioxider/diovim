@@ -66,6 +66,12 @@ return {
 	-- Undo history visualization
 	{ import = "astrocommunity.editing-support.undotree" },
 
+	-- Which-key popup style
+	{
+		"folke/which-key.nvim",
+		opts = { preset = "helix" },
+	},
+
 	-- Show delete changes "between" the lines
 	{
 		"lewis6991/gitsigns.nvim",
