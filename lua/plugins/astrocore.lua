@@ -89,6 +89,13 @@ return {
 					desc = "Close buffer",
 				},
 
+				-- config
+				["<Leader>pr"] = { "<cmd>AstroReload<cr>", desc = "Reload AstroNvim" },
+				["<Leader>pc"] = {
+					function() require("snacks.picker").files({ cwd = vim.fn.stdpath("config") }) end,
+					desc = "Open config",
+				},
+
 				-- tables with just a `desc` key will be registered with which-key if it's installed
 				-- this is useful for naming menus
 				-- ["<Leader>b"] = { desc = "Buffers" },
