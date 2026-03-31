@@ -88,6 +88,25 @@ return {
     },
   },
 
+  -- File explorer as a buffer
+  {
+    "stevearc/oil.nvim",
+    cmd = "Oil",
+    dependencies = {
+      {
+        "AstroNvim/astrocore",
+        opts = {
+          mappings = {
+            n = {
+              ["<Leader>o"] = { "<cmd>Oil<cr>", desc = "Open Oil" },
+            },
+          },
+        },
+      },
+    },
+    opts = {},
+  },
+
   -- Show delete changes "between" the lines
   {
     "lewis6991/gitsigns.nvim",
