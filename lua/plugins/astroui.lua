@@ -5,24 +5,24 @@
 
 ---@type LazySpec
 return {
-	"AstroNvim/astroui",
-	---@type AstroUIOpts
-	opts = {
-		-- change colorscheme
-		colorscheme = "poimandres",
-		-- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
-		highlights = {
-			init = { -- this table overrides highlights in all themes
-				-- Normal = { bg = "#000000" },
-			},
-			poimandres = {
-				LspReferenceText = { bg = "#363a4f" },
-				LspReferenceRead = { bg = "#363a4f" },
-				LspReferenceWrite = { bg = "#363a4f" },
-				FlashLabel = { fg = "#1B1E28", bg = "#5FB3A1", bold = true },
-			},
-		},
-		-- Icons can be configured throughout the interface
-		icons = {},
-	},
+  "AstroNvim/astroui",
+  ---@type AstroUIOpts
+  opts = {
+    -- change colorscheme
+    colorscheme = "poimandres",
+    -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
+    highlights = {
+      init = { -- this table overrides highlights in all themes
+        -- Normal = { bg = "#000000" },
+      },
+      poimandres = {
+        LspReferenceText = { bg = "#363a4f" },
+        LspReferenceRead = { bg = "#363a4f" },
+        LspReferenceWrite = { bg = "#363a4f" },
+        FlashLabel = { fg = "#1B1E28", bg = "#5FB3A1", bold = true },
+      },
+    },
+    -- Icons can be configured throughout the interface
+    icons = {},
+  },
 }
