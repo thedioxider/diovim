@@ -20,14 +20,21 @@ Previously LazyVim. Previously Helix. The cycle continues.
 | `Alt+y` / `Alt+p` | System clipboard yank / paste |
 | `Alt+a` | Select all |
 
-### Multicursor (`,` = local leader)
+### Repeat keys (swapped)
+| Key | Action |
+|-----|--------|
+| `;` | Repeat last edit (default `.`) |
+| `.` | Repeat f/t forward (default `;`) |
+| `,` | Repeat f/t backward |
+
+### Multicursor (`\` = local leader)
 | Key | Action |
 |-----|--------|
 | `Up` / `Down` | Add cursor above / below |
-| `,n` / `,N` | Add cursor at next / prev match |
-| `,s` / `,S` | Skip next / prev match |
+| `\n` / `\N` | Add cursor at next / prev match |
+| `\s` / `\S` | Skip next / prev match |
 | `Ctrl+click` | Add cursor with mouse |
 | `Ctrl+q` | Toggle cursor on/off |
 | `Left` / `Right` | Switch main cursor (multicursor only) |
-| `,x` | Delete main cursor (multicursor only) |
+| `\x` | Delete main cursor (multicursor only) |
 | `Esc` | Clear all cursors |
