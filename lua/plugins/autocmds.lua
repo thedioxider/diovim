@@ -13,6 +13,7 @@ return {
             local bufnr = args.buf
             local ns = vim.api.nvim_create_namespace("trailing_newline")
             vim.api.nvim_buf_clear_namespace(bufnr, ns, 0, -1)
+            if vim.bo[bufnr].buftype ~= "" then return end
             if vim.bo[bufnr].eol then
               local last_line = vim.api.nvim_buf_line_count(bufnr)
               vim.api.nvim_buf_set_extmark(bufnr, ns, last_line - 1, 0, {
