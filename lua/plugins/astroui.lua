@@ -19,6 +19,7 @@ return {
 				LspReferenceText = { bg = "#363a4f" },
 				LspReferenceRead = { bg = "#363a4f" },
 				LspReferenceWrite = { bg = "#363a4f" },
+				FlashLabel = { fg = "#1B1E28", bg = "#5FB3A1", bold = true },
 			},
 		},
 		-- Icons can be configured throughout the interface

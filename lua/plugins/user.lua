@@ -66,6 +66,9 @@ return {
 	-- Undo history visualization
 	{ import = "astrocommunity.editing-support.undotree" },
 
+	-- Label-based navigation
+	{ import = "astrocommunity.motion.flash-nvim" },
+
 	-- Which-key popup style
 	{
 		"folke/which-key.nvim",
