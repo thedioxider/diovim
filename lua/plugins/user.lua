@@ -110,6 +110,13 @@ return {
     opts = {},
   },
 
+  -- Scroll past end of file (makes scrolloff work at EOF)
+  {
+    "Aasim-A/scrollEOF.nvim",
+    event = { "CursorMoved", "WinScrolled" },
+    opts = {},
+  },
+
   -- Show delete changes "between" the lines
   {
     "lewis6991/gitsigns.nvim",

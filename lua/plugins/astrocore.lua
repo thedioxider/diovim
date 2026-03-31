@@ -54,6 +54,7 @@ return {
         breakindent = true,
         breakindentopt = "shift:2",
         showbreak = "↪ ",
+        scrolloff = 8, -- keep 8 lines above/below cursor
         clipboard = "", -- don't auto-sync with system clipboard
         undofile = true, -- persistent undo history across sessions
         expandtab = true, -- use spaces instead of tabs
