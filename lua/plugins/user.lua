@@ -63,6 +63,9 @@ return {
 		},
 	},
 
+	-- Undo history visualization
+	{ import = "astrocommunity.editing-support.undotree" },
+
 	-- Show delete changes "between" the lines
 	{
 		"lewis6991/gitsigns.nvim",
