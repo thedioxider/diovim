@@ -15,4 +15,9 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.xml" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.dart" },
 }
