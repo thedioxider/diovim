@@ -50,7 +50,10 @@ return {
         number = true, -- sets vim.opt.number
         spell = true, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true,
+        breakindent = true,
+        breakindentopt = "shift:2",
+        showbreak = "↪ ",
         clipboard = "", -- don't auto-sync with system clipboard
         undofile = true, -- persistent undo history across sessions
         expandtab = true, -- use spaces instead of tabs
