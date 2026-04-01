@@ -20,6 +20,15 @@ Previously LazyVim. Previously Helix. The cycle continues.
 | `Alt+y` / `Alt+p` | System clipboard yank / paste |
 | `Alt+a` | Select all |
 
+### Navigation
+| Key | Action |
+|-----|--------|
+| `gh` / `gl` | Beginning / end of line |
+| `s` | Flash jump (label-based) |
+| `S` | Flash treesitter select |
+| `<Leader>o` | Open Oil file explorer |
+| `<Leader>\\` / `<Leader>\|` | Horizontal / vertical split |
+
 ### Repeat keys (swapped)
 | Key | Action |
 |-----|--------|
