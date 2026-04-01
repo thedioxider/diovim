@@ -5,6 +5,18 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+
+  -- Editing
+  { import = "astrocommunity.editing-support.undotree" },
+  { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.search.grug-far-nvim" },
+
+  -- UI
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
+  { import = "astrocommunity.color.ccc-nvim" },
+
+  -- Language packs
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },

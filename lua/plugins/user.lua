@@ -1,6 +1,5 @@
--- You can also add or configure plugins by creating files in this `plugins/` folder
--- PLEASE REMOVE THE EXAMPLES YOU HAVE NO INTEREST IN BEFORE ENABLING THIS FILE
--- Here are some examples:
+-- Non-community plugins and plugin overrides.
+-- Community imports are in `community.lua`.
 
 local function dedent(s)
   local lines = vim.split(s, "\n")
@@ -63,18 +62,6 @@ return {
     },
   },
 
-  -- Undo history visualization
-  { import = "astrocommunity.editing-support.undotree" },
-
-  -- Surround editing (gsa, gsd, gsr)
-  { import = "astrocommunity.motion.mini-surround" },
-
-  -- Label-based navigation
-  { import = "astrocommunity.motion.flash-nvim" },
-
-  -- Search and replace
-  { import = "astrocommunity.search.grug-far-nvim" },
-
   -- Which-key popup style
   { "folke/which-key.nvim", opts = { preset = "helix" } },
 
@@ -128,11 +115,7 @@ return {
     },
   },
 
-  -- Markdown rendering
-  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
-
-  -- Color picker
-  { import = "astrocommunity.color.ccc-nvim" },
+  -- Color picker opts
   {
     "uga-rosa/ccc.nvim",
     opts = {
