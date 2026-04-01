@@ -66,6 +66,9 @@ return {
   -- Undo history visualization
   { import = "astrocommunity.editing-support.undotree" },
 
+  -- Surround editing (gsa, gsd, gsr)
+  { import = "astrocommunity.motion.mini-surround" },
+
   -- Label-based navigation
   { import = "astrocommunity.motion.flash-nvim" },
 
