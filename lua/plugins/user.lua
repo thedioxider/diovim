@@ -73,10 +73,7 @@ return {
   { import = "astrocommunity.search.grug-far-nvim" },
 
   -- Which-key popup style
-  {
-    "folke/which-key.nvim",
-    opts = { preset = "helix" },
-  },
+  { "folke/which-key.nvim", opts = { preset = "helix" } },
 
   -- Neo-tree
   {
@@ -124,6 +121,22 @@ return {
       signs = {
         delete = { text = "_" },
         topdelete = { text = "‾" },
+      },
+    },
+  },
+
+  -- Markdown rendering
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
+
+  -- Color picker
+  { import = "astrocommunity.color.ccc-nvim" },
+  {
+    "uga-rosa/ccc.nvim",
+    opts = {
+      alpha_show = "hide",
+      highlighter = {
+        auto_enable = true,
+        lsp = true,
       },
     },
   },
