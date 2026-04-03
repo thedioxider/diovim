@@ -5,6 +5,26 @@ No-nonsense nearly-default Neovim config with barely-standard bindings.
 Built on [AstroNvim v6](https://astronvim.com).\
 Previously LazyVim. Previously Helix. The cycle continues.
 
+## Installation
+
+Back up your current config:
+
+```sh
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv ~/.local/state/nvim ~/.local/state/nvim.bak
+mv ~/.cache/nvim ~/.cache/nvim.bak
+```
+
+Clone and start:
+
+```sh
+git clone https://github.com/thedioxider/diovim ~/.config/nvim
+nvim
+```
+
+Lazy.nvim will install all plugins on first launch.
+
 ## Colorscheme
 
 Custom colorscheme (`diovim`) — [tokyonight](https://github.com/folke/tokyonight.nvim) engine with [poimandres](https://github.com/olivercederborg/poimandres.nvim) palette.
