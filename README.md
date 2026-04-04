@@ -88,6 +88,18 @@ Custom colorscheme (`diovim`) — [tokyonight](https://github.com/folke/tokyonig
 | Visual `<Leader>s`  | Replace selection                  |
 | `gS` (neo-tree/oil) | Search/replace in directory        |
 
+### Tabs
+
+| Key              | Action           |
+| ---------------- | ---------------- |
+| `<Leader><Tab>n` | New tab          |
+| `<Leader><Tab>c` | Close tab        |
+| `<Leader><Tab>o` | Close other tabs |
+| `<Leader><Tab>l` | Next tab         |
+| `<Leader><Tab>h` | Previous tab     |
+| `<Leader><Tab>L` | Move tab right   |
+| `<Leader><Tab>H` | Move tab left    |
+
 ### Formatting
 
 | Key             | Action                        |
