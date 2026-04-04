@@ -1,6 +1,7 @@
+-- Disabled: leaves temp files (.null-ls_*), using conform.nvim instead
 if true then
-  return {}
-end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+  return { { "nvimtools/none-ls.nvim", enabled = false } }
+end
 
 -- Customize None-ls sources
 
