@@ -115,6 +115,16 @@ return {
           desc = "Close buffer",
         },
 
+        -- tabs
+        ["<Leader><Tab>"] = { desc = "Tabs" },
+        ["<Leader><Tab>n"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+        ["<Leader><Tab>c"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
+        ["<Leader><Tab>o"] = { "<cmd>tabonly<cr>", desc = "Close other tabs" },
+        ["<Leader><Tab>l"] = { "<cmd>tabnext<cr>", desc = "Next tab" },
+        ["<Leader><Tab>h"] = { "<cmd>tabprevious<cr>", desc = "Previous tab" },
+        ["<Leader><Tab>L"] = { "<cmd>tabmove +1<cr>", desc = "Move tab right" },
+        ["<Leader><Tab>H"] = { "<cmd>tabmove -1<cr>", desc = "Move tab left" },
+
         -- config
         ["<Leader>pr"] = { "<cmd>AstroReload<cr>", desc = "Reload AstroNvim" },
         ["<Leader>pc"] = {
