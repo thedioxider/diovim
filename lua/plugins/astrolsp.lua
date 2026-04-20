@@ -3,6 +3,25 @@
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
 
+-- NOTE: temporary workaround for https://github.com/neovim/neovim/issues/36318
+-- Swallow "Invalid 'col'" crashes from stale inlay-hint extmarks when the
+-- buffer changes before the LSP re-sends positions. Scoped to the inlay
+-- hint namespace only; other callers still surface errors normally.
+-- Remove once Neovim clamps col to line length in its inlay hint decoration
+-- provider.
+do
+  local orig = vim.api.nvim_buf_set_extmark
+  local inlay_ns = vim.api.nvim_create_namespace("nvim.lsp.inlayhint")
+  vim.api.nvim_buf_set_extmark = function(bufnr, ns, line, col, opts)
+    if ns == inlay_ns then
+      local ok, res = pcall(orig, bufnr, ns, line, col, opts)
+      if ok then return res end
+      return nil
+    end
+    return orig(bufnr, ns, line, col, opts)
+  end
+end
+
 ---@type LazySpec
 return {
   "AstroNvim/astrolsp",
