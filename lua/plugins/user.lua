@@ -70,9 +70,9 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       filesystem = {
-        bind_to_cwd = true,
+        bind_to_cwd = false,
         follow_current_file = { enabled = true },
-        group_empty_dirs = true,
+        group_empty_dirs = false,
         use_libuv_file_watcher = true,
       },
     },
@@ -94,7 +94,7 @@ return {
         },
       },
     },
-    opts = {},
+    opts = { view_options = { show_hidden = true } },
   },
 
   -- Scroll past end of file (makes scrolloff work at EOF)
