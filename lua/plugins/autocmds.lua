@@ -4,6 +4,31 @@ return {
   ---@type AstroCoreOpts
   opts = {
     autocmds = {
+      -- Disable inlay hints during format-on-save to avoid stale-position
+      -- extmark crashes when conform rewrites the buffer while inlay hint
+      -- responses are in flight.
+      inlay_hints_format_guard = {
+        {
+          event = "BufWritePre",
+          desc = "Disable inlay hints before format-on-save",
+          callback = function(args)
+            if vim.lsp.inlay_hint.is_enabled({ bufnr = args.buf }) then
+              vim.b[args.buf].inlay_hints_were_enabled = true
+              vim.lsp.inlay_hint.enable(false, { bufnr = args.buf })
+            end
+          end,
+        },
+        {
+          event = "BufWritePost",
+          desc = "Re-enable inlay hints after format-on-save",
+          callback = function(args)
+            if vim.b[args.buf].inlay_hints_were_enabled then
+              vim.b[args.buf].inlay_hints_were_enabled = nil
+              vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+            end
+          end,
+        },
+      },
       -- Show ~ on last line if file ends with a trailing newline (like Helix)
       trailing_newline_indicator = {
         {
