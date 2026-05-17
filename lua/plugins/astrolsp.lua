@@ -15,7 +15,9 @@ do
   vim.api.nvim_buf_set_extmark = function(bufnr, ns, line, col, opts)
     if ns == inlay_ns then
       local ok, res = pcall(orig, bufnr, ns, line, col, opts)
-      if ok then return res end
+      if ok then
+        return res
+      end
       return nil
     end
     return orig(bufnr, ns, line, col, opts)
@@ -70,6 +72,11 @@ return {
 
       -- the key is the server that is being setup with `vim.lsp.config`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
+
+      -- Python: basedpyright is the chosen type checker; black handles formatting
+      ruff = false,
+      pyrefly = false,
+      ty = false,
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
