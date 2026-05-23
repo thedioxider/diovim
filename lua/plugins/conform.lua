@@ -56,12 +56,20 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
+      formatters = {
+        prettier_rasi = {
+          command = "prettier",
+          args = { "--parser", "css", "--stdin-filepath", "$FILENAME" },
+          stdin = true,
+        },
+      },
       formatters_by_ft = {
         nix = { "nixfmt" },
         python = { "black" },
         html = { "prettier" },
         css = { "prettier" },
         scss = { "prettier" },
+        rasi = { "prettier_rasi" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
