@@ -73,6 +73,7 @@ return {
         javascript = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
+        qml = { "qmlformat" },
         markdown = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
