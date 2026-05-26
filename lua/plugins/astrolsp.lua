@@ -130,6 +130,9 @@ return {
     on_attach = function(client, bufnr)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
+
+      -- qmlls sends malformed semantic token deltas; disable until fixed upstream
+      if client.name == "qmlls" then client.server_capabilities.semanticTokensProvider = nil end
     end,
   },
 }
